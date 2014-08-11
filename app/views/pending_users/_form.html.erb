@@ -1,4 +1,4 @@
-<%= form_for(@pending_user, :html => {:class => 'request_access_form'}) do |f| %>
+<%= form_for @pending_user, url: create_pending_user_path, method: 'post' do |f| %>
 
     <div class="field">
       <%= f.label :name %>
@@ -17,13 +17,13 @@
     </div>
 
     <div class="field">
-      <%= f.label :phone_number %>
-      <%= f.telephone_field :phone_number %>
+      <%= f.label :phone%>
+      <%= f.telephone_field :phone %>
     </div>
 
     <div class="field">
       <%= f.label :reason %>
-      <%= f.text_field :reason %>
+      <%= f.select :reason, [['default', 'default']] %>
     </div>  
 
     <div class="field">

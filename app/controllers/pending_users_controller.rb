@@ -1,16 +1,14 @@
 class PendingUsersController < ApplicationController
   def new
+    @pending_user = PendingUser.new
   end
 
   def create
     @pending_user = PendingUser.new(pending_user_params)
     if @pending_user.save
-      flash.now[:notice] = "Thank you for contacting Atmospheir."
-      flash.color[:valid]
-      redirect_to home_path
+      redirect_to new_pending_user_path, notice: "Thank you for your interest."
     else
       flash.now[:notice] = "Your submission is invalid."
-      flash.color[:invalid]
       render "new"    
     end
   end
@@ -18,6 +16,6 @@ class PendingUsersController < ApplicationController
   private
 
   def pending_user_params
-    params.require(:pending_user).permit(:name, :email, :phone_number, :company, :reason, :message) 
+    params.require(:pending_user).permit(:authenticity_token, :name, :email, :phone, :company_name, :reason, :message) 
   end
 end
