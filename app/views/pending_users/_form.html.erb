@@ -1,0 +1,35 @@
+<%= form_for(@pending_user, :html => {:class => 'request_access_form'}) do |f| %>
+
+    <div class="field">
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+    </div>
+
+    <div class="field">
+      <%= f.label :company_name %>
+      <%= f.text_field :company_name %>
+    </div> 
+
+
+    <div class="field">
+      <%= f.label :email %>
+      <%= f.text_field :email %>
+    </div>
+
+    <div class="field">
+      <%= f.label :phone_number %>
+      <%= f.telephone_field :phone_number %>
+    </div>
+
+    <div class="field">
+      <%= f.label :reason %>
+      <%= f.text_field :reason %>
+    </div>  
+
+    <div class="field">
+      <%= f.label :message %>
+      <%= f.text_field :message %>
+    </div> 
+
+    <%= f.submit("Request Account", :class => "btn btn-info round2")%>
+  <% end %>
