@@ -24,7 +24,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'pry'
 gem 'validates_formatting_of'
-gem 'better_errors'
+#gem 'better_errors'
 gem 'filepicker-rails'
 gem 'figaro'
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring

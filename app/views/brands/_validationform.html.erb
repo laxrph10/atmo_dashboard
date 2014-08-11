@@ -1,0 +1,22 @@
+<%= form_for(@brand, method: 'get') do |f| %>
+  <%=f.label :brand_name%>
+  <%=f.text_field :brand_name%><br>
+  <%=f.label :website%>
+  <%=f.text_field :website%><br>
+  <%=f.label :phone_number%>
+  <%=f.text_field :phone_number%><br>
+  <%=f.label :email%>
+  <%=f.email_field :email%><br>
+  <%=f.label :address%>
+  <%=f.text_field :address%><br>
+  <%=f.label :description%>
+  <%=f.text_field :description%>
+  <%=f.label :company%>
+  <%=f.text_field :company_name%>
+  <%=f.label :company_representative%>
+  <%=f.text_field :company_representative_name%>
+  <%=f.label :secret_code%>
+  <%=f.text_field :secret_code%>
+
+    <%= f.submit("Validate your account.", :class => "btn btn-info round2")%>
+  <% end %>

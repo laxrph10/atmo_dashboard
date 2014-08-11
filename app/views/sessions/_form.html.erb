@@ -1,1 +1,14 @@
-<h1>this will be the log in form</h1>
+<%= form_for(brands_path(@brand), method: 'get') do |f| %>
+
+    <div class="field">
+      <%= f.label :email %>
+      <%= f.email_field :id %>
+    </div>
+
+    <div class="field">
+      <%= f.label :password %>
+      <%= f.password_field :password %>
+    </div> 
+
+    <%= f.submit("Log In", :class => "btn btn-info round2")%>
+  <% end %>

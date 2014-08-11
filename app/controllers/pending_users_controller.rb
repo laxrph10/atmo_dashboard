@@ -1,4 +1,7 @@
 class PendingUsersController < ApplicationController
+  def new
+  end
+
   def create
     @pending_user = PendingUser.new(pending_user_params)
     if @pending_user.save
