@@ -14,6 +14,18 @@
 ActiveRecord::Schema.define(version: 20140811141658) do
 
   create_table "brands", force: true do |t|
+    t.string   "brand_name"
+    t.string   "website"
+    t.string   "phone"
+    t.string   "email"
+    t.string   "address"
+    t.string   "description"
+    t.string   "company_name"
+    t.string   "company_representative_name"
+    t.string   "avatar_img"
+    t.string   "header_img"
+    t.string   "auth_token"
+    t.string   "secret_code"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -37,6 +49,8 @@ ActiveRecord::Schema.define(version: 20140811141658) do
   end
 
   create_table "pinterests", force: true do |t|
+    t.string   "brand_id"
+    t.string   "pinterest_username"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

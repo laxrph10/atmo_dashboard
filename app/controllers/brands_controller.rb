@@ -3,17 +3,21 @@ class BrandsController < ApplicationController
   respond_to :json
 
   def index
-    @username = Brand.find_by(params:id)
+    @brand = Brand.find(params[:email])
   end
 
   def show
   end
 
   def new
-    @brand = Brand.new(brand_params)
-    if @brand.save
+    @brand = Brand.new
+  end
+
+  def create
+    atmospheir_client = AtmospheirClient.new(params[:email], params[:secret_code])
+    if @brand = atmospheir_client.validate
       session[:brand_id] = @brand.id
-      redirect_to brand_path
+      redirect_to edit_brand_path
     else
       flash.now[:notice] = "Your submission is invalid."
       render "new"
@@ -21,6 +25,7 @@ class BrandsController < ApplicationController
   end
 
   def edit
+    @brand = Brand.find(params[:id])
   end
 
   def update
@@ -37,6 +42,6 @@ class BrandsController < ApplicationController
   end
 
   def brand_params
-    params.require(:brand).permit(:brand_name, :id, :website, :phone_number, :email, :address, :description, :password, :auth_token, :company_name, :company_representative_name)
+    params.require(:brand).permit(:brand_name, :id, :website, :phone_number, :email, :address, :description, :password, :secret_code, :company_name, :company_representative_name)
   end
 end

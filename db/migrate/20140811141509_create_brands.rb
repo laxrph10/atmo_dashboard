@@ -12,6 +12,7 @@ class CreateBrands < ActiveRecord::Migration
       t.string :avatar_img
       t.string :header_img
       t.string :auth_token
+      t.string :secret_code
       t.timestamps
     end
   end
