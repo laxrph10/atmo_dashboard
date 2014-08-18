@@ -25,7 +25,6 @@ class BrandsController < ApplicationController
   end
 
   def edit
-    @brand = Brand.find(params[:email])
   end
 
   def update
@@ -38,10 +37,10 @@ class BrandsController < ApplicationController
   private
   
   def set_brand
-    @brand = Brand.find_by(:email=>'johndoe@coke.com')#TODO find by params[:email] passed from the validation form
+    @brand = Brand.find(params[:id])#TODO find by params[:email] passed from the validation form
   end
 
   def brand_params
-    params.require(:brand).permit(:brand_name, :id, :website, :phone_number, :email, :address, :description, :password, :secret_code, :company_name, :company_representative_name)
+    params.require(:brand).permit(:brand_name, :id, :website, :phone, :email, :address, :description, :password, :secret_code, :company_name, :company_representative_name)
   end
 end

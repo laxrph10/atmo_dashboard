@@ -1,5 +1,3 @@
-<%= render "layouts/flash_notices" %>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,8 +7,10 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
+<div class="container">
+  <%= render "layouts/flash_notices" %>
+  <%= yield %>
+</div>
 
 </body>
 </html>
