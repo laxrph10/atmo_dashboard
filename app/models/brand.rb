@@ -6,4 +6,7 @@ class Brand < ActiveRecord::Base
 
   def accounts
   end
+
+  def authenticate(email)
+  end
 end
