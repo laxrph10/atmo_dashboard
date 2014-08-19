@@ -3,8 +3,12 @@
     <h2>Contact Information</h2>
     <small>For public display</small>
     <div class="brand-images">
-      <img src= "<%=@brand.avatar_img%>", width="80", class="avatar"><br>
-      <img src= "<%=@brand.header_img%>", width="400", class="header"><br>
+      <a href="#" class="avatar">
+        <img src= "<%=@brand.avatar_img%>", width="80">
+      </a>
+      <a href="#" class="header">
+        <img src= "<%=@brand.header_img%>", width="400">
+      </a>
     </div>
   </div>
     <%=render "contact"%>

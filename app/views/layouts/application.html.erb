@@ -21,9 +21,9 @@
         <a class="navbar-brand" href="#">
           <% if @brand%>
             <span><img src="<%= @brand.avatar_img %>" width="30"></span>
-            <span><%= @brand.brand_name %></span>
+            <span class="brand-name"><%= @brand.brand_name %></span>
           <% else %>
-            Atmospheir
+            <span>Atmospheir</span>
           <% end %>
         </a>
       </div>

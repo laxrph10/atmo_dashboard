@@ -1,9 +1,10 @@
 .avatar {
   position: absolute;
   z-index: 2;
-  top: 126px;
+}
+
+.avatar img {
   border-radius: 50%;
-  background-color: black;
 }
 
 .brand-images img:hover {

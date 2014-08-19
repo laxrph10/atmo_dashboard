@@ -1,3 +1,4 @@
 $('.edit_brand').remove();
+$('.navbar-brand span.brand-name').text('<%= @brand.brand_name %>');
 $('.brand').replaceWith('<%= j render "contact"%>');
 $('.edit').show();
