@@ -2,8 +2,13 @@
   <div class="brand-header">
     <h2>Contact Information</h2>
     <small>For public display</small>
+    <div class="brand-images">
+      <img src= "<%=@brand.avatar_img%>", width="80", class="avatar"><br>
+      <img src= "<%=@brand.header_img%>", width="400", class="header"><br>
+    </div>
   </div>
     <%=render "contact"%>
+    <button class="edit btn btn-info round2">Edit</button>
 </div>
 
 <div class="brand-panel col-md-6">

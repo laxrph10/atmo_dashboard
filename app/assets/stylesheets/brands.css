@@ -3,28 +3,19 @@
   z-index: 2;
   top: 126px;
   border-radius: 50%;
+  background-color: black;
 }
 
-span.text-content {
-  background: rgba(0,0,0,0.5);
-  color: white;
-  cursor: pointer;
-  display: table;
-  height: 150px;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 150px;
-  opacity: 1;
+.brand-images img:hover {
+  opacity: 0.5;
 }
-
 
 .header {
   position: relative;
   z-index: 1;
 }
 
-.header-panel {
+.brand-images {
   height: 250px;
 }
 
