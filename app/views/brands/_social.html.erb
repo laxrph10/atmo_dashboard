@@ -1,8 +1,8 @@
 <div class="brand_social">
-  <table class="table">
+  <table class="table table-hover">
     <thead>
       <tr>
-        <td colspan="2"></td>
+        <td colspan="4"></td>
       </tr>
     </thead>
     <tbody>
@@ -10,21 +10,25 @@
         <td><strong>Instagram</strong></td> 
         <td><i class="fa fa-instagram"></i></td>
         <td><%=@brand.instagrams.first.instagram_username%></td>
+        <td><a href="#">Link/unlink</a></td>
       </tr>
       <tr>
         <td><strong>Twitter</strong></td>
         <td><i class="fa fa-twitter"></i></td>
         <td><%=@brand.twitters.first.twitter_username%></td> 
+        <td><a href="#">Link/unlink</a></td>
       </tr>
       <tr>
         <td><strong>Soundcloud</strong></td>
         <td><i class="fa fa-soundcloud"></i></td>
         <td><%=@brand.soundclouds.first.soundcloud_username%></td>
+        <td><a href="#">Link/unlink</a></td>
       </tr>
       <tr>
         <td><strong>Pinterest</strong></td>
         <td><i class="fa fa-pinterest"></i></td>
         <td><%=@brand.pinterests.first.pinterest_username%></td>
+        <td><a href="#">Link/unlink</a></td>
       </tr>
     </tbody>
   </table>

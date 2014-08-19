@@ -1,14 +1,55 @@
+.avatar {
+  position: absolute;
+  z-index: 2;
+  top: 126px;
+  border-radius: 50%;
+}
+
+span.text-content {
+  background: rgba(0,0,0,0.5);
+  color: white;
+  cursor: pointer;
+  display: table;
+  height: 150px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 150px;
+  opacity: 1;
+}
+
+
+.header {
+  position: relative;
+  z-index: 1;
+}
+
+.header-panel {
+  height: 250px;
+}
+
 .brand-panel {
   margin: 1% 1%;
-  padding: 1%;
+  padding: 2%;
   width: 48%;
   float: left;
   border-style: solid;
-  border-radius: 10px;
-  border-color: grey;
+  border-radius: 5px;
+  border-color: lightgrey;
+  border-width: 2px;
 }
 
 .center-panel {
   margin: 0 auto;
   width: 35%;
+}
+
+.brand-panel .fa {
+  font-size: 1.5em;
+}
+
+.brand-panel img {
+  border-color: lightgrey;
+  border-style: solid;
+  border-width: 1px;
 }
