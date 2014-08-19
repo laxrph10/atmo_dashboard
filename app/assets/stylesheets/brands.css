@@ -17,3 +17,9 @@
   border-radius: 10px;
   border-style: solid;
 }
+
+.center-panel {
+  margin: 0 auto;
+  width: 35%;
+
+}

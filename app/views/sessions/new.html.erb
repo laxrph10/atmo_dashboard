@@ -1,9 +1,11 @@
-<h1>Welcome to AtmoDashboard!</h1>
+<!-- <h1>Welcome to AtmoDashboard!</h1> -->
 
-<h2>Log in:</h2>
-<%= render 'form' %>
+<div class="center-panel">
+  <h2>Log in:</h2>
+  <%= render 'form' %>
+<div>
 
-<h2>New Users Click Here to Create/Validate Account (LINK TO brands#new)</h2>
-<%= link_to "Validate/Create Account", new_brand_path%>
-<h2>Interested in Joining? Pending Users click here (LINK TO pending_users#new)</h2> 
+<!-- <h2>New Users Click Here to Create/Validate Account (LINK TO brands#new)</h2> -->
+<%= link_to "Validate/Create Account", new_brand_path%><br>
+<!-- <h2>Interested in Joining? Pending Users click here (LINK TO pending_users#new)</h2> --> 
 <%= link_to "Request Account", new_pending_user_path%>

@@ -1,6 +1,8 @@
 <div class="brand_social">
-  <strong>Instagram</strong> <%=@brand.instagrams.first.instagram_username%><br>
-  <strong>Twitter</strong> <%=@brand.twitters.first.twitter_username%><br>
-  <strong>Soundcloud</strong> <%=@brand.soundclouds.first.soundcloud_username%><br>
-  <strong>Pinterest</strong> <%=@brand.pinterests.first.pinterest_username%><br>
+  <ul class="list-group">
+    <li class="list-group-item"><strong>Instagram</strong> <%=@brand.instagrams.first.instagram_username%></li>
+    <li class="list-group-item"><strong>Twitter</strong> <%=@brand.twitters.first.twitter_username%></li>
+    <li class="list-group-item"><strong>Soundcloud</strong> <%=@brand.soundclouds.first.soundcloud_username%></li>
+    <li class="list-group-item"><strong>Pinterest</strong> <%=@brand.pinterests.first.pinterest_username%></li>
+  </ul>
 </div>
