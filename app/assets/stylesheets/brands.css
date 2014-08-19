@@ -1,25 +1,14 @@
-.brand_panel {
+.brand-panel {
   margin: 1% 1%;
   padding: 1%;
-  width: 47%;
+  width: 48%;
   float: left;
   border-style: solid;
   border-radius: 10px;
   border-color: grey;
-}
-
-.social_panel {
-  margin: 1% 1%;
-  width: 47%;
-  padding: 1%;
-  float: left;
-  border-color: grey;
-  border-radius: 10px;
-  border-style: solid;
 }
 
 .center-panel {
   margin: 0 auto;
   width: 35%;
-
 }

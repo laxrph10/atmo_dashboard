@@ -1,8 +1,31 @@
 <div class="brand_social">
-  <ul class="list-group">
-    <li class="list-group-item"><strong>Instagram</strong> <%=@brand.instagrams.first.instagram_username%></li>
-    <li class="list-group-item"><strong>Twitter</strong> <%=@brand.twitters.first.twitter_username%></li>
-    <li class="list-group-item"><strong>Soundcloud</strong> <%=@brand.soundclouds.first.soundcloud_username%></li>
-    <li class="list-group-item"><strong>Pinterest</strong> <%=@brand.pinterests.first.pinterest_username%></li>
-  </ul>
+  <table class="table">
+    <thead>
+      <tr>
+        <td colspan="2"></td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Instagram</strong></td> 
+        <td><i class="fa fa-instagram"></i></td>
+        <td><%=@brand.instagrams.first.instagram_username%></td>
+      </tr>
+      <tr>
+        <td><strong>Twitter</strong></td>
+        <td><i class="fa fa-twitter"></i></td>
+        <td><%=@brand.twitters.first.twitter_username%></td> 
+      </tr>
+      <tr>
+        <td><strong>Soundcloud</strong></td>
+        <td><i class="fa fa-soundcloud"></i></td>
+        <td><%=@brand.soundclouds.first.soundcloud_username%></td>
+      </tr>
+      <tr>
+        <td><strong>Pinterest</strong></td>
+        <td><i class="fa fa-pinterest"></i></td>
+        <td><%=@brand.pinterests.first.pinterest_username%></td>
+      </tr>
+    </tbody>
+  </table>
 </div>
