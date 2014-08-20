@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140811141658) do
+ActiveRecord::Schema.define(version: 20140820011238) do
 
   create_table "brands", force: true do |t|
     t.string   "brand_name"
@@ -65,6 +65,13 @@ ActiveRecord::Schema.define(version: 20140811141658) do
   create_table "twitters", force: true do |t|
     t.string   "brand_id"
     t.string   "twitter_username"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "vimeos", force: true do |t|
+    t.string   "brand_id"
+    t.string   "vimeo_username"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -32,8 +32,13 @@
 }
 
 .center-panel {
-  margin: 0 auto;
+  margin: 10% auto;
   width: 35%;
+  border-style: solid;
+  border-radius: 5px;
+  border-color: lightgrey;
+  border-width: 2px;
+  padding: 2%;
 }
 
 .brand-panel .fa {
