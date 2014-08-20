@@ -1,9 +1,9 @@
 class Brand < ActiveRecord::Base
-  has_many :twitters
-  has_many :pinterests 
-  has_many :instagrams
-  has_many :soundclouds
-  has_many :vimeos
+  has_one :twitter
+  has_one :pinterest 
+  has_one :instagram
+  has_one :soundcloud
+  has_one :vimeo
 
   def accounts
   end
