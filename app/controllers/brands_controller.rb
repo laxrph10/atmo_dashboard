@@ -1,12 +1,12 @@
 class BrandsController < ApplicationController
-  before_action :set_brand, only: [:show, :edit, :update]
+  before_action :set_brand, only: [:show, :edit, :update, :index]
   respond_to :json
 
   def index
-    @brand = Brand.find(params[:email])
   end
 
   def show
+    binding.pry
   end
 
   def new
@@ -14,10 +14,11 @@ class BrandsController < ApplicationController
   end
 
   def create
-    atmospheir_client = AtmospheirClient.new(params[:user_name], params[:secret_code], params[:password])
+    atmospheir_client = AtmospheirClient.new(params[:user_name], params[:one_time_passcode], params[:password])
     if @brand = atmospheir_client.validate
-      session[:brand_id] = @brand.id
-      redirect_to edit_brand_path
+      brand = Brand.find_by user_name: atmospheir_client.user_name
+      session[:brand_id] = brand.id
+      redirect_to brand_path(session[:brand_id])
     else
       flash.now[:notice] = "Your submission is invalid."
       render "new"
@@ -37,7 +38,7 @@ class BrandsController < ApplicationController
   private
   
   def set_brand
-    @brand = Brand.find(params[:id])#TODO find by params[:email] passed from the validation form
+    @brand = Brand.find(params[:id])
   end
 
   def brand_params
