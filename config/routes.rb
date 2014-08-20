@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
+  get '/auth/:provider/callback', to: 'sessions#create'
+
   # Example of named route that can be invoked with purchase_url(id: product.id)
   get 'pending_users/new' => 'pending_users#new', as: :new_pending_user
   post 'pending_users/create' => 'pending_users#create', as: :create_pending_user
