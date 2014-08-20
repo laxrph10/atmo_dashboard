@@ -39,6 +39,10 @@ GEM
     coffee-script-source (1.7.1)
     erubis (2.7.0)
     execjs (2.2.1)
+    faraday (0.9.0)
+      multipart-post (>= 1.2, < 3)
+    faraday_middleware (0.9.1)
+      faraday (>= 0.7.4, < 0.10)
     figaro (0.7.0)
       bundler (~> 1.0)
       rails (>= 3, < 5)
@@ -54,7 +58,13 @@ GEM
     httparty (0.13.1)
       json (~> 1.8)
       multi_xml (>= 0.5.2)
+    httpclient (2.4.0)
     i18n (0.6.11)
+    instagram (1.1.2)
+      faraday (>= 0.7, < 0.10)
+      faraday_middleware (>= 0.8, < 0.10)
+      hashie (>= 0.4.0)
+      multi_json (~> 1.0, >= 1.0.3)
     jbuilder (2.1.3)
       activesupport (>= 3.0.0, < 5)
       multi_json (~> 1.2)
@@ -73,6 +83,7 @@ GEM
     multi_xml (0.5.5)
     multipart-post (2.0.0)
     netrc (0.7.7)
+    oauth (0.4.7)
     omniauth (1.2.2)
       hashie (>= 1.2, < 4)
       rack (~> 1.0)
@@ -187,6 +198,12 @@ GEM
       json (>= 1.8.0)
     validates_formatting_of (0.8.1)
       activemodel (~> 4.0)
+    vimeo (1.5.4)
+      httparty (>= 0.4.5)
+      httpclient (>= 2.1.5.2)
+      json (>= 1.1.9)
+      multipart-post (>= 1.0.1)
+      oauth (>= 0.4.3)
 
 PLATFORMS
   ruby
@@ -196,6 +213,7 @@ DEPENDENCIES
   figaro
   filepicker-rails
   gibberish
+  instagram
   jbuilder (~> 2.0)
   jquery-rails
   omniauth
@@ -210,3 +228,4 @@ DEPENDENCIES
   turbolinks
   uglifier (>= 1.3.0)
   validates_formatting_of
+  vimeo
