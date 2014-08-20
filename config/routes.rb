@@ -8,8 +8,13 @@ Rails.application.routes.draw do
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
-  get '/auth/:provider/callback', to: 'sessions#create'
+  get '/auth/:provider/callback', to: 'brands#index'
 
+  get "/oauth/callback" do
+    response = Instagram.get_access_token(params[:code], :redirect_uri => "http://localhost:3000/oauth/callback")
+    session[:access_token] = response.access_token
+    redirect "/nav"
+  end
   # Example of named route that can be invoked with purchase_url(id: product.id)
   get 'pending_users/new' => 'pending_users#new', as: :new_pending_user
   post 'pending_users/create' => 'pending_users#create', as: :create_pending_user
