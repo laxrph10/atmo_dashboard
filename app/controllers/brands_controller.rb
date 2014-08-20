@@ -14,7 +14,7 @@ class BrandsController < ApplicationController
   end
 
   def create
-    atmospheir_client = AtmospheirClient.new(params[:email], params[:secret_code])
+    atmospheir_client = AtmospheirClient.new(params[:user_name], params[:secret_code], params[:password])
     if @brand = atmospheir_client.validate
       session[:brand_id] = @brand.id
       redirect_to edit_brand_path

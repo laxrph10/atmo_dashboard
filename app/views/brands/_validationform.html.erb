@@ -1,12 +1,15 @@
 <%= form_for(@brand, method: 'post') do |f| %>
   <div class="form-group">
-    <%=f.text_field :company_representative_name, placeholder: "company representative"%>
+    <%=f.text_field :user_name, placeholder: "Username"%>
   </div>
   <div class="form-group">
     <%=f.email_field :email, placeholder: "email"%>
   </div>
   <div class="form-group">
-    <%=f.text_field :secret_code, placeholder: "password"%>
+    <%=f.text_field :secret_code, placeholder: "one time passcode"%>
+  </div>
+    <div class="form-group">
+    <%=f.text_field :password, placeholder: "password"%>
   </div>
   <%= f.submit("Validate your account.", :class => "btn btn-info round2")%>
 <% end %>

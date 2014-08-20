@@ -1,19 +1,20 @@
 class AtmospheirClient
-  URL = "http://dev.atmospheir.com"
-  attr_reader :email, :secret_code
+  URL = "https://dev.atmospheir.com/ent/EntAuthenticateCredentials.php"
+  attr_reader :user_name, :secret_code, :password
 
-  def initialize(email, secret_code)
-    @email = email
+  def initialize(user_name, secret_code, password)
+    @user_name = user_name
     @secret_code = secret_code
+    @password = password
   end
 
   def validate
-    timestamp = Time.now
-    hmac_string = Gibberish::HMAC(ENV["key"], secret_code + timestamp.to_s, :digest => :sha256)
-    response = RestClient.post(URL, {:hmac => hmac_string, :id => email, :password => secret_code, :timestamp => timestamp})
+    #timestamp = Time.now
+    hmac_string = Gibberish::HMAC(ENV["key"], @secret_code, :digest => :sha256)
+    response = RestClient.post(URL, {:oneTimePassword => @secret_code, :hmac => hmac_string, :id => @user_name,  :password => @password})
     parsed_response = JSON.parse(response)
     if parsed_response["success"]
-      brand = Brand.new({:email => email, :auth_token => parsed_response["auth_token"]})
+      brand = Brand.new({:user_name => @user_name, :auth_token => parsed_response["auth_token"]})
       brand.save
     else 
       false
