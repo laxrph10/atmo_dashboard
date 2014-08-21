@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140820144110) do
+ActiveRecord::Schema.define(version: 20140821134920) do
 
   create_table "brands", force: true do |t|
     t.string   "brand_name"
@@ -31,7 +31,7 @@ ActiveRecord::Schema.define(version: 20140820144110) do
     t.string   "user_name"
   end
 
-  create_table "instagrams", force: true do |t|
+  create_table "instausers", force: true do |t|
     t.string   "brand_id"
     t.string   "instagram_username"
     t.datetime "created_at"
@@ -49,28 +49,28 @@ ActiveRecord::Schema.define(version: 20140820144110) do
     t.datetime "updated_at"
   end
 
-  create_table "pinterests", force: true do |t|
+  create_table "pinusers", force: true do |t|
     t.string   "brand_id"
     t.string   "pinterest_username"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "soundclouds", force: true do |t|
+  create_table "soundcloudusers", force: true do |t|
     t.string   "brand_id"
     t.string   "soundcloud_username"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "twitters", force: true do |t|
+  create_table "twittusers", force: true do |t|
     t.string   "brand_id"
     t.string   "twitter_username"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "vimeos", force: true do |t|
+  create_table "vimeousers", force: true do |t|
     t.string   "brand_id"
     t.string   "vimeo_username"
     t.datetime "created_at"
