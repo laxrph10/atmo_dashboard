@@ -6,7 +6,13 @@ class BrandsController < ApplicationController
   end
 
   def show
-    binding.pry
+    client = Soundclouduser.login
+    redirect_to client.authorize_url()
+    redirect_to brands_path(@brand.id)
+    if code = params[:code]
+      brand = @brand
+      brand.soundclouduser.access_token = client.exchange_token(:code => code)
+    end
   end
 
   def new
@@ -38,6 +44,7 @@ class BrandsController < ApplicationController
   private
   
   def set_brand
+    binding.pry
     @brand = Brand.find(params[:id])
   end
 

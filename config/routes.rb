@@ -21,7 +21,7 @@ Rails.application.routes.draw do
   get 'brands/new' => 'brands#new', as: :new_brand
   # Example resource route (maps HTTP verbs to controller actions automatically):
   resources :brands
-
+    
   # Example resource route with options:
   #   resources :products do
   #     member do
