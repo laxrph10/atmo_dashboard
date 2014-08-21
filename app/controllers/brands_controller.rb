@@ -44,7 +44,6 @@ class BrandsController < ApplicationController
   private
   
   def set_brand
-    binding.pry
     @brand = Brand.find(params[:id])
   end
 
