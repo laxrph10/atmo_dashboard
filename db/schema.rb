@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140821134920) do
+ActiveRecord::Schema.define(version: 20140821172314) do
 
   create_table "brands", force: true do |t|
     t.string   "brand_name"
@@ -61,6 +61,7 @@ ActiveRecord::Schema.define(version: 20140821134920) do
     t.string   "soundcloud_username"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "access_token"
   end
 
   create_table "twittusers", force: true do |t|

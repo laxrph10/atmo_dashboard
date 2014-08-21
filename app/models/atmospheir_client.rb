@@ -11,8 +11,7 @@ class AtmospheirClient
   end  
 
   def validate
-    #timestamp = Time.now
-    hmac_string = Gibberish::HMAC('TckU8jYw924j7KdwpCE6OtmQWQSaa9JL9Lxc9Zehx87zo8GDNVCKYD1idPBafZzn', @one_time_passcode, :digest => :sha256)
+    hmac_string = Gibberish::HMAC(ENV['KEY']  , @one_time_passcode, :digest => :sha256)
     response = RestClient.post(URL, {:oneTimePassword => @one_time_passcode, :hmac => hmac_string, :id => @user_name,  :password => @password}.to_json)
     parsed_response = JSON.parse(response)
     if parsed_response["success"]
