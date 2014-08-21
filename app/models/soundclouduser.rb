@@ -1,5 +1,5 @@
 class Soundclouduser < ActiveRecord::Base
-  belongs_to :brand
+  belongs_to :brand 
 
   def self.login
     client = SoundCloud.new({
