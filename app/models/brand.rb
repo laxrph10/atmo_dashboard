@@ -10,6 +10,8 @@ class Brand < ActiveRecord::Base
   def accounts
   end
 
-  def authenticate(email)
+  def authenticate(password)
+    #This is where we will sent the password to Atmo for validation.
+    true
   end
 end
