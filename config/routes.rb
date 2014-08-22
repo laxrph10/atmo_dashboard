@@ -7,8 +7,15 @@ Rails.application.routes.draw do
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
+  get '/login' => 'sessions#new'
+  post '/login_path' => 'sessions#create'
+  get '/logout' => 'sessions#destroy'
+  
 
   get '/auth/:provider/callback', to: 'brands#index'
+
+  get '/soundcloud/new' => 'soundcloud#new', as: :soundcloud_login
+  get '/soundcloud/show' => 'soundcloud#show', as: :soundcloud_redirect
 
   get "/oauth/callback" do
     response = Instagram.get_access_token(params[:code], :redirect_uri => "http://localhost:3000/oauth/callback")
