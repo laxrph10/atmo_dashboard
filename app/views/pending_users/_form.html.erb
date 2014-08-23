@@ -1,35 +1,27 @@
 <%= form_for @pending_user, url: create_pending_user_path, method: 'post' do |f| %>
-
     <div class="field">
       <%= f.label :name %>
       <%= f.text_field :name %>
     </div>
-
     <div class="field">
       <%= f.label :company_name %>
       <%= f.text_field :company_name %>
     </div> 
-
-
     <div class="field">
       <%= f.label :email %>
       <%= f.text_field :email %>
     </div>
-
     <div class="field">
       <%= f.label :phone%>
       <%= f.telephone_field :phone %>
     </div>
-
     <div class="field">
       <%= f.label :reason %>
       <%= f.select :reason, [['default', 'default']] %>
     </div>  
-
     <div class="field">
       <%= f.label :message %>
       <%= f.text_field :message %>
     </div> 
-
     <%= f.submit("Request Account", :class => "btn btn-info round2")%>
   <% end %>

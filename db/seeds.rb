@@ -14,8 +14,8 @@
       Twittuser.create(brand_id: 1, twitter_username: '@coke')
       Twittuser.create(brand_id: 2, twitter_username: '@jeep')
       Twittuser.create(brand_id: 3, twitter_username: '@oreo')
-      Twittuser.create(brand_id: 4, twitter_username: '@Tester1')
-      Twittuser.create(brand_id: 5, twitter_username: '@Tester2')
+      Twittuser.create(brand_id: 4, twitter_username: '@snoopdogg')
+      Twittuser.create(brand_id: 5, twitter_username: '@conanobrien')
 
       Instauser.create(brand_id: 1, instagram_username:'@insta_coke')
       Instauser.create(brand_id: 2, instagram_username: '@insta_jeep')

@@ -3,7 +3,18 @@ class BrandsController < ApplicationController
   respond_to :json
 
   def index
-    @twitter_client = Twittuser.authenticate
+    
+  end
+
+  def brand_feed
+    @brand = Brand.find_by(:id => session[:brand_id])
+    twitter_client = Twittuser.authenticate
+    @tweets = twitter_client.user_timeline("#{@brand.twittuser.twitter_username}")
+    
+    #client = SoundCloud.new(:access_token => @brand.soundclouduser.access_token)
+    #@username = client.get('/me').username
+    #@playlist = client.get("/me/playlists").first
+    
   end
 
   def show

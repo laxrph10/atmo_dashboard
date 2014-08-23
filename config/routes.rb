@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   #   get 'products/:id' => 'catalog#view'
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'
-  get '/logout' => 'sessions#destroy'
+  get '/logout' => 'sessions#destroy', as: :logout
   
 
   get '/auth/:provider/callback', to: 'brands#index'
@@ -28,7 +28,8 @@ Rails.application.routes.draw do
   get 'brands/new' => 'brands#new', as: :new_brand
   # Example resource route (maps HTTP verbs to controller actions automatically):
   resources :brands
-    
+
+  get '/brands/:id/feed' => 'brands#brand_feed', as: :brands_feed
   # Example resource route with options:
   #   resources :products do
   #     member do

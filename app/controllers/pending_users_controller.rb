@@ -6,7 +6,7 @@ class PendingUsersController < ApplicationController
   def create
     @pending_user = PendingUser.new(pending_user_params)
     if @pending_user.save
-      redirect_to new_pending_user_path, notice: "Thank you for your interest."
+      redirect_to root_path, notice: "Thank you for your interest."
     else
       flash.now[:notice] = "Your submission is invalid."
       render "new"    

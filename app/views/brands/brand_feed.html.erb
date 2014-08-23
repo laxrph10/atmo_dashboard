@@ -1,0 +1,13 @@
+<h1>Home view</h1>
+<h2>This is where the news feed will display.</h2>
+<%= render 'atmo_status'%>
+
+<div class="twitter-feed">
+  <h4>Recent Tweets:</h4>
+  
+  <ul>
+  <% @tweets.each do |tweet|%>
+    <li><%= tweet.attrs[:text]%> | <%= tweet.attrs[:created_at]%></li>
+  <% end %>
+  </ul>
+<div>
