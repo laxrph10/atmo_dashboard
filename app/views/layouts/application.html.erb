@@ -31,12 +31,12 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
-          <%#if @brand%>
-            <li><%#= link_to "Home", brands_feed_path(@brand.id) %></li>
-            <li><%#= link_to "Analytics", logout_path%></li>
-            <li><%#= link_to "Account", brand_path(@brand.id)%></li>
-            <li><%#= link_to "Log Out", logout_path%></li>
-          <%#end%>
+          <%if @brand && @brand.user_name != nil%>
+            <li><%= link_to "Home", brands_feed_path(@brand.id) %></li>
+            <li><%= link_to "Analytics", logout_path%></li>
+            <li><%= link_to "Account", brand_path(@brand.id)%></li>
+            <li><%= link_to "Log Out", logout_path%></li>
+          <%end%>
         </ul>
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
