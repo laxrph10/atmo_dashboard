@@ -12,7 +12,7 @@ class SessionsController < ApplicationController
   
   def create
     brand = Brand.find_by(:user_name => params[:username])
-    binding.pry
+    
     if brand && brand.authenticate(params[:password])
       session[:brand_id] = brand.id
       redirect_to brand_path(brand)

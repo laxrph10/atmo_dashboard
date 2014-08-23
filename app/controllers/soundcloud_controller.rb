@@ -5,11 +5,11 @@ class SoundcloudController < ApplicationController
   end
 
   def show
-    @brand
-    if code = params[:code]
-      brand = @brand
-      brand.soundclouduser.access_token = params[:code]
-      redirect_to brands_path(@brand.id)
+    @brand = Brand.find_by(:id => session[:brand_id])
+    if params[:code]
+      @brand.soundclouduser.access_token = params[:code]
+      @brand.save
+      redirect_to brand_path(@brand.id)
     end
   end
 end
