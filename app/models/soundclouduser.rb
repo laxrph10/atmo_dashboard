@@ -10,8 +10,8 @@ class Soundclouduser < ActiveRecord::Base
   end
 
   def self.refresh 
-    client = Soundcloud.new(:client_id => ENV['SOUNDCLOUND_CLIENT_ID'],
-                        :client_secret => ENV['SOUNDCLOUND_CLIENT_SECRET'],
-                        :refresh_token => 'SOME_REFRESH_TOKEN')
+    client = Soundcloud.new(:client_id     => ENV['SOUNDCLOUND_CLIENT_ID'],
+                            :client_secret => ENV['SOUNDCLOUND_CLIENT_SECRET'],
+                            :refresh_token => 'SOME_REFRESH_TOKEN')
   end
 end
