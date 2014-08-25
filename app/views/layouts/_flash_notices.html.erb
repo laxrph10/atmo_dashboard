@@ -1,9 +1,9 @@
-<div class="alert alert-warning alert-dismissible" role="alert">
-  <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-  <strong>
-    <% if flash %>
-    <div class="notice"><%= flash[:notice] %></div>
-    <% end %>
-  </strong>
-</div>
+<% flash.each do |name, msg| %>
+    <div class="flash">
+    <%= content_tag :div, class: "alert alert-info alert-dismissable", id: "flash_#{name}" do-%>
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+      <%=msg%>
+      <%end%>
+      </div>
+<% end %>
 
